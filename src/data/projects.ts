@@ -1,180 +1,271 @@
 export interface Project {
   name: string
+  role: string
   description: string
+  problem?: string
+  approach?: string
+  outcome?: string
   features: string[]
   technologies: string[]
   category?: string
-  highlights?: string[]
+  period?: string
+  featured?: boolean
+  demoUrl?: string
+  codeUrl?: string
 }
 
 export const projects: Project[] = [
   {
-    name: 'Warehouse Management System (SwiftSuit)',
-    description: 'Enterprise-level warehouse management system designed to streamline inventory operations, optimize supply chain processes, and provide real-time visibility into warehouse activities.',
+    name: 'Sergha General Transport',
+    role: 'Full-Stack Developer',
+    description: 'Corporate website for heavy transport and equipment company in UAE',
+    featured: true,
+    problem: 'Client needed a professional online presence to showcase their heavy transport services and equipment fleet to UAE market.',
+    approach: 'Built a modern, responsive marketing website with service showcases, equipment listings, and contact forms.',
+    outcome: 'Live production website serving as the company primary digital presence in the UAE transport sector.',
     features: [
-      'Real-time inventory tracking and management',
-      'Order processing and fulfillment automation',
-      'Advanced analytics and reporting dashboard',
-      'Multi-warehouse support with location management',
-      'Barcode scanning and label generation',
-      'Integration with shipping carriers',
-      'Automated reorder points and stock alerts'
+      'Responsive design for all devices',
+      'Service portfolio and fleet showcase',
+      'Contact and inquiry forms',
+      'SEO optimized for UAE market',
+      'Fast page load performance'
     ],
-    technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Prisma'],
-    category: 'Enterprise',
-    highlights: ['Scalable architecture', 'Real-time updates', 'Advanced analytics']
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
+    category: 'Client Website',
+    demoUrl: 'https://sergha-general-transport.vercel.app/'
   },
   {
-    name: 'HRMS (TeaOceans)',
-    description: 'Comprehensive Human Resource Management System providing end-to-end HR solutions including employee lifecycle management, payroll processing, and performance analytics.',
+    name: 'CoreInfor',
+    role: 'Full-Stack Developer',
+    description: 'Corporate website for digital solutions and IT services company',
+    featured: true,
+    problem: 'Digital solutions firm needed a modern website to present their consulting, development, and managed services offerings.',
+    approach: 'Developed a professional corporate website highlighting their service portfolio and industry expertise.',
+    outcome: 'Production website serving as the company main marketing platform for their digital solutions services.',
     features: [
-      'Complete employee database and profile management',
-      'Attendance tracking with biometric integration',
-      'Automated payroll processing and calculations',
-      'Performance appraisal and review system',
-      'Leave management with approval workflows',
-      'Recruitment and onboarding modules',
-      'Employee self-service portal',
-      'Advanced reporting and analytics'
+      'Professional service presentation',
+      'Responsive corporate design',
+      'Service portfolio sections',
+      'Contact and consultation forms',
+      'Modern UI/UX'
     ],
-    technologies: ['React.js', 'Redux Toolkit', 'Ant Design', 'GraphQL', 'MongoDB', 'Node.js', 'Express'],
-    category: 'Enterprise',
-    highlights: ['Complete HR solution', 'Automated workflows', 'Performance analytics']
+    technologies: ['Next.js', 'React', 'Tailwind CSS'],
+    category: 'Client Website',
+    demoUrl: 'https://www.coreinfor.com/'
   },
   {
-    name: 'Flash Funded',
-    description: 'Modern financial platform for managing funding rounds, investments, and financial tracking with comprehensive analytics and investor relations management.',
+    name: 'Hysabat',
+    role: 'Lead Frontend Developer',
+    description: 'Multi-product ERP/HRM/POS suite for enterprise clients',
+    period: '2022–Present',
+    featured: true,
+    problem: 'JMM Technologies needed a comprehensive, maintainable frontend architecture for their flagship ERP suite serving multiple business verticals.',
+    approach: 'Owned the entire frontend end-to-end: architected reusable components, implemented modern state management (Zustand, TanStack Query), real-time GraphQL subscriptions, and migrated apps across major React and library upgrades.',
+    outcome: 'Delivered production-ready web ERP, tenant portal, POS system, offline desktop app (Blazor), and a multilingual Next.js 15 marketing website with Arabic/English i18n and RTL support.',
     features: [
-      'Investment portfolio tracking and management',
-      'Funding round management and documentation',
-      'Real-time financial analytics and charts',
-      'Investor dashboard and reporting',
-      'Document management and compliance tracking',
-      'Multi-currency support',
-      'Automated financial reporting',
-      'Secure transaction processing'
+      'Real-time GraphQL subscriptions for live updates',
+      'JWT/OTP authentication with role-based access',
+      'QR codes, barcodes, printable invoices, PDF export',
+      'Arabic/English i18n with RTL layout support',
+      'Recharts dashboards with business analytics',
+      'Offline desktop app and POS (Blazor/Razor Pages)',
+      'Multi-product architecture: ERP, HRM, POS, tenant portal'
     ],
-    technologies: ['React.js', 'Next.js', 'TypeScript', 'Recharts', 'ApexCharts', 'REST APIs', 'Node.js'],
-    category: 'Fintech',
-    highlights: ['Financial analytics', 'Secure transactions', 'Real-time tracking']
+    technologies: ['React 17-19', 'Next.js 15', 'Vite', 'Apollo GraphQL', 'TanStack Query', 'Zustand', 'Ant Design', 'Tailwind CSS', 'ASP.NET Core', 'Blazor', 'Razor Pages'],
+    category: 'Enterprise ERP',
+    demoUrl: 'https://hysabat.com/en'
   },
   {
-    name: 'ERP System',
-    description: 'Comprehensive Enterprise Resource Planning system integrating multiple business modules including finance, inventory, sales, procurement, and customer relationship management.',
+    name: 'Sadeef',
+    role: 'Sole Frontend Developer',
+    description: 'Capital call management platform for investment firms',
+    featured: true,
+    problem: 'Investment firms needed a robust platform to manage capital calls, track investor commitments, and generate compliance reports.',
+    approach: 'Single-handedly architected and delivered the entire frontend, implementing a rich-text editor (Tiptap), real-time updates (SignalR), and custom Excel/PDF export with complex table styling.',
+    outcome: 'Production platform handling multi-million dollar capital calls with real-time notifications, styled reports, and comprehensive dashboards.',
     features: [
-      'Integrated financial management and accounting',
-      'Inventory and supply chain management',
-      'Sales and purchase order management',
-      'Customer relationship management (CRM)',
-      'Multi-company and multi-currency support',
-      'Customizable workflows and approval processes',
-      'Business intelligence and reporting',
-      'API integrations with third-party services'
+      'Tiptap rich-text editor with tables, images, links, formatting',
+      'SignalR real-time updates for collaborative editing',
+      'Recharts dashboards with investment analytics',
+      'Styled Excel export (xlsx-js-style)',
+      'PDF reports with complex tables (jsPDF, jspdf-autotable)',
+      'Document version control and audit trails'
     ],
-    technologies: ['React.js', 'Zustand', 'Ant Design', 'Node.js', 'PostgreSQL', 'Prisma', 'GraphQL'],
-    category: 'Enterprise',
-    highlights: ['Full business integration', 'Customizable workflows', 'Business intelligence']
+    technologies: ['React 19', 'Vite', 'TanStack Query', 'Zustand', 'Ant Design 6', 'SignalR', 'Tiptap', 'Recharts'],
+    category: 'FinTech'
   },
   {
-    name: 'LMS (EMS)',
-    description: 'Advanced Learning Management System enabling educational institutions to manage courses, track student progress, conduct assessments, and provide comprehensive learning analytics.',
+    name: 'SwiftSuit',
+    role: 'Frontend Developer',
+    description: 'Warehouse management system with real-time inventory tracking',
+    featured: true,
+    problem: 'Warehouse operations needed real-time visibility into inventory movements, stock levels, and automated reordering workflows.',
+    approach: 'Built comprehensive WMS frontend with SignalR live updates, Google Maps integration for location tracking, and drag-and-drop workflows for efficient operations.',
+    outcome: 'Deployed system managing thousands of SKUs across multiple warehouses with real-time accuracy and automated workflows.',
     features: [
-      'Course creation and content management',
-      'Student enrollment and progress tracking',
-      'Interactive assignments and assessments',
-      'Gradebook and performance analytics',
-      'Discussion forums and collaboration tools',
-      'Video conferencing integration',
-      'Certificate generation',
-      'Mobile-responsive learning interface'
+      'SignalR real-time inventory updates',
+      'ApexCharts dashboards with stock analytics',
+      'Google Maps integration for warehouse locations',
+      'Excel/CSV import/export for bulk operations',
+      'Barcode generation and printing',
+      'Drag-and-drop workflow builder',
+      'Multi-language support (i18n)'
     ],
-    technologies: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'ChartIQ', 'Recharts', 'GraphQL', 'Node.js'],
-    category: 'Education',
-    highlights: ['Interactive learning', 'Progress analytics', 'Mobile-friendly']
+    technologies: ['React 18', 'Apollo GraphQL', 'Ant Design', 'Zustand', 'SignalR', 'ApexCharts', 'Google Maps API'],
+    category: 'Enterprise'
   },
   {
-    name: 'E-commerce Platform (Tojjar)',
-    description: 'Full-featured e-commerce platform with comprehensive product management, shopping cart, secure payment processing, and advanced admin dashboard for store management.',
+    name: 'TeaOceans',
+    role: 'Frontend Developer',
+    description: 'Human Resource Management System with media capabilities',
+    featured: true,
+    problem: 'HR departments needed a comprehensive HRMS with multimedia recording for interviews, training, and performance reviews.',
+    approach: 'Implemented GraphQL subscriptions for live updates, ApexCharts dashboards, and browser-based media features using FFmpeg for video/audio processing.',
+    outcome: 'Full-featured HRMS with real-time collaboration, multimedia capabilities, and dual-calendar support (Gregorian/Hijri).',
     features: [
-      'Product catalog with advanced filtering and search',
-      'Shopping cart and checkout process',
-      'Secure payment gateway integration (Stripe)',
-      'Order management and tracking',
-      'Inventory management with stock alerts',
-      'Customer accounts and order history',
-      'Admin dashboard with analytics',
-      'Multi-vendor support (optional)'
+      'GraphQL subscriptions for real-time updates',
+      'Video/audio recording, playback, in-browser FFmpeg processing',
+      'ApexCharts dashboards with HR analytics',
+      'In-app PDF viewing and export (jsPDF, html2canvas)',
+      'Rich-text editing with CKEditor',
+      'Gregorian and Hijri calendar support',
+      'Multi-language i18n and responsive layouts'
     ],
-    technologies: ['React.js', 'Next.js', 'TypeScript', 'Stripe', 'MongoDB', 'Node.js', 'Express'],
-    category: 'E-commerce',
-    highlights: ['Secure payments', 'Advanced search', 'Admin analytics']
+    technologies: ['React 18', 'Apollo GraphQL', 'Ant Design', 'Zustand', 'ApexCharts', 'FFmpeg', 'CKEditor'],
+    category: 'Enterprise HRMS'
   },
   {
-    name: 'Business Incorporation System (Firmsanad)',
-    description: 'Platform for business registration and incorporation management with automated document processing, workflow management, and compliance tracking.',
+    name: 'Cash Comment',
+    role: 'Frontend Developer',
+    description: 'Crypto trading desktop and web app',
     features: [
-      'Business registration and incorporation workflows',
-      'Document upload and processing system',
-      'Automated form filling and validation',
-      'Status tracking and notifications',
-      'Payment processing for fees',
-      'Compliance checking and validation',
-      'Digital signature integration',
-      'Certificate generation and download'
+      'Electron desktop app with live crypto market data streaming',
+      'Active/inactive trade tracking and portfolio management',
+      'ChartIQ advanced charting with technical indicators',
+      'Companion React web app with ApexCharts dashboards',
+      'CKEditor for trade notes and analysis',
+      'Infinite scroll for trade history'
     ],
-    technologies: ['React.js', 'Inertia.js', 'Laravel', 'PostgreSQL', 'Ant Design', 'PHP'],
-    category: 'Business',
-    highlights: ['Automated workflows', 'Document processing', 'Compliance tracking']
-  },
-  {
-    name: 'Consultancy Platform (Uptikk)',
-    description: 'Consultancy management platform connecting consultants with clients, featuring booking, scheduling, real-time communication, and project management tools.',
-    features: [
-      'Consultant and client matching system',
-      'Booking and scheduling calendar',
-      'Real-time messaging and video calls',
-      'Project management and task tracking',
-      'Payment processing and invoicing',
-      'Rating and review system',
-      'Document sharing and collaboration',
-      'Analytics dashboard for consultants'
-    ],
-    technologies: ['React.js', 'Next.js', 'TypeScript', 'WebSockets', 'MongoDB', 'Node.js', 'Socket.io'],
-    category: 'SaaS',
-    highlights: ['Real-time communication', 'Booking system', 'Project management']
+    technologies: ['Electron.js', 'React 18', 'React Query', 'Ant Design', 'ChartIQ', 'ApexCharts', 'WebSockets'],
+    category: 'FinTech'
   },
   {
     name: 'Hyper Terminal',
-    description: 'Advanced terminal application with enhanced features, customization options, plugin support, and integration capabilities for developers.',
+    role: 'Frontend Developer',
+    description: 'Crypto trading terminal (desktop)',
     features: [
-      'Customizable themes and appearance',
-      'Plugin system for extensibility',
-      'Multiple tab and split pane support',
-      'Command history and autocomplete',
-      'SSH and remote connection support',
-      'Integrated terminal multiplexer',
-      'Custom shortcuts and keybindings',
-      'Performance optimization'
+      'Electron trading terminal with WebSocket live data',
+      'Redux Toolkit state management',
+      'Tailwind CSS + Ant Design UI',
+      'Live price ticker with real-time updates',
+      'Multi-exchange support'
     ],
-    technologies: ['React.js', 'TypeScript', 'Electron', 'Node.js', 'WebSockets'],
-    category: 'Desktop',
-    highlights: ['Customizable', 'Plugin support', 'Performance optimized']
+    technologies: ['Electron.js', 'React 18', 'Vite', 'Redux Toolkit', 'Tailwind CSS', 'WebSockets'],
+    category: 'FinTech'
   },
   {
-    name: 'KIU Portals (Knowledge International University)',
-    description: 'University portal system providing comprehensive student services including enrollment, course registration, grade management, and administrative operations.',
+    name: 'Tojjar',
+    role: 'Senior Frontend Developer',
+    description: 'E-commerce platform',
     features: [
-      'Student portal with personal dashboard',
-      'Course registration and enrollment',
-      'Grade viewing and transcript generation',
-      'Fee payment and financial aid management',
-      'Academic calendar and event management',
-      'Library system integration',
-      'Faculty portal for course management',
-      'Administrative dashboard for university staff'
+      'Next.js SSR and CSR for SEO and performance',
+      'One of two senior frontend developers',
+      'Laravel backend: Blade templates, API endpoints',
+      'Product catalog, checkout, payment integration'
     ],
-    technologies: ['React.js', 'Bootstrap', 'REST APIs', 'PostgreSQL', 'Node.js', 'Express'],
-    category: 'Education',
-    highlights: ['Student services', 'Academic management', 'Integrated system']
+    technologies: ['Next.js', 'React', 'Laravel (PHP)', 'Blade'],
+    category: 'E-commerce'
+  },
+  {
+    name: 'ALSN',
+    role: 'Frontend Developer & Team Lead',
+    description: 'Certified translation system',
+    features: [
+      'Led 2 junior developers',
+      'SignalR real-time collaboration features',
+      'Moyasar payment integration',
+      'Multi-language i18n support',
+      'Phone input with country codes',
+      'Responsive Sass UI'
+    ],
+    technologies: ['React 18', 'Vite', 'React Query', 'Ant Design', 'Zustand', 'SignalR', 'Sass'],
+    category: 'Enterprise'
+  },
+  {
+    name: 'Firmsanad',
+    role: 'Frontend Developer & Team Lead',
+    description: 'Business incorporation system',
+    features: [
+      'Led team of 2 junior developers',
+      'Document processing workflows',
+      'Form automation and validation',
+      'Task assignment and code review'
+    ],
+    technologies: ['React'],
+    category: 'Business'
+  },
+  {
+    name: 'Uptikk',
+    role: 'Frontend Developer',
+    description: 'Consultancy platform',
+    features: [
+      'Next.js frontend under tech lead',
+      'Worked with backend and design teams',
+      'User flows and API integration',
+      'Booking and scheduling features'
+    ],
+    technologies: ['Next.js', 'React'],
+    category: 'SaaS'
+  },
+  {
+    name: 'Kortana',
+    role: 'Lead Frontend Developer',
+    description: 'Side project',
+    features: [
+      'Built user web app and admin dashboard',
+      'Designed UI and flows with backend partner',
+      'Recharts analytics dashboards',
+      'Maps integration, date-range filters',
+      'Password-strength validation',
+      'Mentored junior developer'
+    ],
+    technologies: ['React 18', 'Vite', 'React Query', 'Ant Design', 'Zustand', 'Recharts'],
+    category: 'SaaS'
+  },
+  {
+    name: 'Flash Funded',
+    role: 'Lead Frontend Developer',
+    description: 'Side project',
+    features: [
+      'Designed and built frontend with backend partner',
+      'UI/UX design and user flows',
+      'Mentored junior developer'
+    ],
+    technologies: ['React 18', 'Vite', 'React Query', 'Ant Design', 'Zustand', 'Recharts'],
+    category: 'FinTech'
+  },
+  {
+    name: 'KIU Portals',
+    role: 'Junior Frontend Developer',
+    description: 'Knowledge International University',
+    features: [
+      'Built and maintained multiple university portals',
+      'Worked under senior developer',
+      'Student and faculty management'
+    ],
+    technologies: ['React (CRA)', 'Redux Toolkit', 'SCSS'],
+    category: 'Education'
+  },
+  {
+    name: 'Kalarity',
+    role: 'Frontend Developer',
+    description: 'Document management tool',
+    features: [
+      'In-browser PDF viewing, editing and search',
+      'Document data management',
+      'User flow optimization'
+    ],
+    technologies: ['React', 'PDF.js', 'jsPDF'],
+    category: 'Enterprise'
   }
 ]

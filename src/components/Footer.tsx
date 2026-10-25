@@ -1,53 +1,132 @@
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Heart, Mail, Linkedin, Github, MessageCircle } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
+  const whatsappNumber = '+923078518828'
+
+  const quickLinks = [
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ]
+
+  const socialLinks = [
+    {
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      href: `https://wa.me/${whatsappNumber}`,
+      color: 'hover:text-accent-emerald'
+    },
+    {
+      icon: Mail,
+      label: 'Email',
+      href: 'mailto:minhasshahmir@hotmail.com',
+      color: 'hover:text-primary-400'
+    },
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/shahmir-minhas',
+      color: 'hover:text-primary-400'
+    },
+    {
+      icon: Github,
+      label: 'GitHub',
+      href: 'https://github.com/shahmir-minhas',
+      color: 'hover:text-gray-300'
+    },
+  ]
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-gray-300 py-12">
+    <footer className="bg-dark-elevated border-t border-white/10 py-12">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center md:text-left">
-            <p className="text-gray-400">
-              © {currentYear} Shahmir Minhas. All rights reserved.
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          {/* Brand */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="text-gradient">Shahmir Minhas</span>
+            </h3>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              Senior Full-Stack Engineer specializing in React/Next.js products that get clients paying users.
             </p>
-            <p className="text-gray-500 text-sm mt-1">
-              Built with React, TypeScript, and Tailwind CSS
-            </p>
-          </div>
+            <div className="flex items-center gap-2 text-sm text-gray-500">
+              <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse"></div>
+              <span>Open for freelance projects</span>
+            </div>
+          </motion.div>
 
-          <div className="flex gap-6">
-            <a
-              href="https://www.linkedin.com/in/shahmir-minhas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="https://github.com/shahmir-minhas"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-200 transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="mailto:minhasshahmir@hotmail.com"
-              className="text-gray-400 hover:text-blue-400 transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <nav className="space-y-3">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="block text-gray-400 hover:text-primary-400 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </motion.div>
+
+          {/* Connect */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+            <div className="space-y-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target={social.label !== 'Email' ? '_blank' : undefined}
+                  rel={social.label !== 'Email' ? 'noopener noreferrer' : undefined}
+                  className={`flex items-center gap-3 text-gray-400 ${social.color} transition-colors group`}
+                >
+                  <social.icon size={20} />
+                  <span>{social.label}</span>
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
+
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p className="text-gray-500 text-sm text-center md:text-left">
+            © {currentYear} Shahmir Minhas. All rights reserved.
+          </p>
+          <p className="text-gray-500 text-sm flex items-center gap-2">
+            Built with <Heart size={14} className="text-red-500 fill-current" /> using React + TypeScript + Tailwind
+          </p>
+        </motion.div>
       </div>
     </footer>
   )
 }
 
 export default Footer
-

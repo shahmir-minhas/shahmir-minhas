@@ -6,36 +6,89 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: 'Frontend Frameworks',
-    skills: ['React.js', 'Next.js 13', 'TypeScript', 'JavaScript (ES6+)']
+    title: 'Frontend',
+    skills: [
+      'JavaScript (ES6+)',
+      'React.js 17-19',
+      'Next.js 13-15',
+      'TypeScript',
+      'Electron.js',
+      'Vite',
+      'Inertia.js'
+    ]
   },
   {
     title: 'Styling & UI',
-    skills: ['Tailwind CSS', 'Ant Design', 'Bootstrap', 'CSS3', 'HTML5']
+    skills: [
+      'Tailwind CSS',
+      'Ant Design',
+      'Bootstrap',
+      'Sass/SCSS',
+      'HTML5',
+      'CSS3'
+    ]
   },
   {
-    title: 'State Management',
-    skills: ['Redux Toolkit', 'Zustand', 'React Query', 'Apollo Client']
+    title: 'State & Data',
+    skills: [
+      'Redux Toolkit',
+      'Zustand',
+      'TanStack Query',
+      'Apollo Client',
+      'GraphQL',
+      'REST APIs',
+      'SignalR',
+      'WebSockets'
+    ]
   },
   {
-    title: 'Backend & APIs',
-    skills: ['Node.js', 'Express', 'NestJS', 'REST APIs', 'GraphQL']
+    title: 'Backend (Intermediate)',
+    skills: [
+      'Node.js',
+      'Express',
+      'NestJS',
+      'ASP.NET Core',
+      'Laravel (PHP)',
+      'Blazor',
+      'Grails'
+    ]
   },
   {
-    title: 'Databases & ORM',
-    skills: ['MongoDB', 'PostgreSQL', 'Prisma', 'SQL']
+    title: 'Databases',
+    skills: [
+      'PostgreSQL',
+      'MongoDB',
+      'Prisma ORM',
+      'SQL',
+      'Firebase'
+    ]
   },
   {
-    title: 'Charts & Data',
-    skills: ['Recharts', 'ApexCharts', 'ChartIQ', 'React Query']
+    title: 'Rich Content',
+    skills: [
+      'Recharts',
+      'ApexCharts',
+      'ChartIQ',
+      'CKEditor',
+      'Tiptap',
+      'PDF.js',
+      'jsPDF'
+    ]
   },
   {
-    title: 'Additional Frameworks',
-    skills: ['ASP.NET Core', 'Blazor', 'MVC', 'WordPress', 'PHP (Blade)', 'Inertia.js']
-  },
-  {
-    title: 'Tools & Technologies',
-    skills: ['Git', 'GitHub', 'Bitbucket', 'Jira', 'Postman', 'Firebase', 'Docker', 'Adobe XD', 'Figma']
+    title: 'Tools',
+    skills: [
+      'Git',
+      'GitHub',
+      'Bitbucket',
+      'Jira',
+      'Postman',
+      'VS Code',
+      'Docker',
+      'Figma',
+      'Adobe XD',
+      'Vercel'
+    ]
   }
 ]
 
