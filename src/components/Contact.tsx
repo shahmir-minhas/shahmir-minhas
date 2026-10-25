@@ -41,7 +41,7 @@ function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-dark-surface relative overflow-hidden">
+    <section id="contact" className="py-24 bg-white dark:bg-dark-surface relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-emerald/5"></div>
 
@@ -58,13 +58,13 @@ function Contact() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
           >
             Get In Touch
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-white">Let's Build </span>
+            <span className="text-gray-900 dark:text-white">Let's Build </span>
             <span className="text-gradient">Something Great</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-4">
@@ -102,7 +102,7 @@ function Contact() {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-emerald/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <method.icon size={28} className="text-primary-400" />
                   </div>
-                  <ArrowRight size={20} className="text-gray-600 group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={20} className="text-gray-600 group-hover:text-primary-500 dark:hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{method.label}</h3>
                 <p className="text-primary-400 font-mono text-sm mb-2">{method.value}</p>
@@ -117,7 +117,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="glass rounded-2xl p-8 border border-white/10"
+            className="glass rounded-2xl p-8 border border"
           >
             <h3 className="text-lg font-semibold text-gray-400 mb-6 text-center">Also Find Me On</h3>
             <div className="grid md:grid-cols-2 gap-4">
@@ -127,16 +127,16 @@ function Contact() {
                   href={method.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary-500/30 transition-all group"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 border border hover:border-primary-500/30 transition-all group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/10 to-transparent flex items-center justify-center">
-                    <method.icon size={20} className="text-gray-400 group-hover:text-primary-400 transition-colors" />
+                    <method.icon size={20} className="text-gray-400 group-hover:text-primary-500 dark:hover:text-primary-400 transition-colors" />
                   </div>
                   <div className="flex-1">
                     <p className="text-white font-medium mb-0.5">{method.label}</p>
                     <p className="text-gray-500 text-sm">{method.description}</p>
                   </div>
-                  <ArrowRight size={16} className="text-gray-600 group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={16} className="text-gray-600 group-hover:text-primary-500 dark:hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                 </a>
               ))}
             </div>

@@ -24,13 +24,13 @@ function Footer() {
       icon: Mail,
       label: 'Email',
       href: 'mailto:minhasshahmir@hotmail.com',
-      color: 'hover:text-primary-400'
+      color: 'hover:text-primary-500 dark:hover:text-primary-400'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/shahmir-minhas',
-      color: 'hover:text-primary-400'
+      color: 'hover:text-primary-500 dark:hover:text-primary-400'
     },
     {
       icon: Github,
@@ -41,7 +41,7 @@ function Footer() {
   ]
 
   return (
-    <footer className="bg-dark-elevated border-t border-white/10 py-12">
+    <footer className="bg-gray-100 dark:bg-dark-elevated border-t border py-12">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -76,7 +76,7 @@ function Footer() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="block text-gray-400 hover:text-primary-400 transition-colors"
+                  className="block text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -115,7 +115,7 @@ function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="pt-8 border-t border flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-gray-500 text-sm text-center md:text-left">
             © {currentYear} Shahmir Minhas. All rights reserved.

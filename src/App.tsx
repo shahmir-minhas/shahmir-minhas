@@ -30,7 +30,7 @@ function App() {
   }, [darkMode])
 
   return (
-    <div className="min-h-screen bg-dark-bg text-gray-100 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-bg text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <FeaturedProduct />

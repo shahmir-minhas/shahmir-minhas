@@ -3,7 +3,7 @@ import { skillCategories } from '../data/skills'
 
 function Skills() {
   return (
-    <section id="skills" className="py-24 bg-dark-bg relative overflow-hidden">
+    <section id="skills" className="py-24 bg-gray-50 dark:bg-dark-bg relative overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,13 +17,13 @@ function Skills() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
           >
             Technical Skills
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-white">Tech </span>
+            <span className="text-gray-900 dark:text-white">Tech </span>
             <span className="text-gradient">Stack</span>
           </h2>
         </motion.div>
@@ -43,7 +43,7 @@ function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 whileHover={{ y: -5 }}
-                className={`glass rounded-2xl p-6 md:p-8 border border-white/10 hover:border-primary-500/30 transition-all ${gridClass}`}
+                className={`glass rounded-2xl p-6 md:p-8 border border hover:border-primary-500/30 transition-all ${gridClass}`}
               >
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary-400 rounded-full"></span>
@@ -59,7 +59,7 @@ function Skills() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: index * 0.05 + skillIndex * 0.02 }}
                       whileHover={{ scale: 1.05 }}
-                      className="px-3 py-1.5 bg-white/5 hover:bg-primary-500/10 border border-white/10 hover:border-primary-500/30 rounded-lg text-sm text-gray-300 hover:text-primary-400 transition-all cursor-default"
+                      className="px-3 py-1.5 bg-white/5 hover:bg-primary-500/10 border border hover:border-primary-500/30 rounded-lg text-sm text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-all cursor-default"
                     >
                       {skill}
                     </motion.span>
@@ -78,9 +78,9 @@ function Skills() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-4xl mx-auto mt-12 text-center"
         >
-          <div className="glass rounded-xl p-6 border border-white/10">
-            <p className="text-gray-400">
-              <strong className="text-white">Methodology:</strong> Agile (Scrum) • MVC Architecture • 
+          <div className="glass rounded-xl p-6 border border">
+            <p className="text-gray-600 dark:text-gray-400">
+              <strong className="text-gray-900 dark:text-white">Methodology:</strong> Agile (Scrum) • MVC Architecture • 
               Object-Oriented Programming • Git Workflow • Code Review • Cross-Browser Testing
             </p>
           </div>
