@@ -6,9 +6,9 @@ function Hero() {
   const whatsappMessage = encodeURIComponent('Hi Shahmir! I would like to discuss a project.')
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:bg-dark-bg">
       {/* Gradient Mesh Background */}
-      <div className="absolute inset-0 bg-gradient-mesh opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-mesh opacity-20 dark:opacity-40"></div>
       
       {/* Animated Glow Orbs */}
       <motion.div
@@ -21,7 +21,7 @@ function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-20 right-20 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl"
+        className="absolute top-20 right-20 w-96 h-96 bg-primary-500/20 dark:bg-primary-500/30 rounded-full blur-3xl"
       />
       <motion.div
         animate={{
@@ -33,7 +33,7 @@ function Hero() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute bottom-20 left-20 w-96 h-96 bg-accent-emerald/20 rounded-full blur-3xl"
+        className="absolute bottom-20 left-20 w-96 h-96 bg-accent-emerald/10 dark:bg-accent-emerald/20 rounded-full blur-3xl"
       />
 
       <div className="container-custom relative z-10 py-20">
@@ -51,7 +51,7 @@ function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass rounded-full border border-accent-emerald/30"
           >
             <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-gray-300">Open for freelance projects</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Open for freelance projects</span>
           </motion.div>
 
           {/* Name */}
@@ -61,7 +61,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
           >
-            <span className="text-white">Shahmir</span>
+            <span className="text-gray-900 dark:text-white">Shahmir</span>
             <br />
             <span className="text-gradient">Minhas</span>
           </motion.h1>
@@ -71,7 +71,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 font-medium leading-relaxed"
+            className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-4 font-medium leading-relaxed"
           >
             Senior Full-Stack Engineer
           </motion.p>
@@ -80,11 +80,11 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             I ship React/Next.js + Node products that get clients paying users.
             <br />
-            <span className="text-gray-500">5+ years • Pakistan • Remote</span>
+            <span className="text-gray-500 dark:text-gray-500">5+ years • Pakistan • Remote</span>
           </motion.p>
 
           {/* Primary CTAs */}
@@ -111,7 +111,7 @@ function Hero() {
               href="mailto:minhasshahmir@hotmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-4 glass glass-hover rounded-xl font-semibold text-lg text-gray-200"
+              className="flex items-center gap-3 px-8 py-4 glass glass-hover rounded-xl font-semibold text-lg text-gray-700 dark:text-gray-200"
             >
               <Mail size={22} />
               <span>Email</span>
@@ -129,7 +129,7 @@ function Hero() {
               href="https://www.linkedin.com/in/shahmir-minhas"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
+              className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             >
               <Linkedin size={20} />
               <span className="text-sm">LinkedIn</span>
@@ -139,13 +139,13 @@ function Hero() {
               href="https://github.com/shahmir-minhas"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
+              className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
             >
               <Github size={20} />
               <span className="text-sm">GitHub</span>
             </a>
 
-            <div className="w-px h-6 bg-gray-700"></div>
+            <div className="w-px h-6 bg-gray-300 dark:bg-gray-700"></div>
 
             <a
               href="https://mizan-erp-site.vercel.app"
@@ -164,7 +164,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-16 text-gray-500 text-sm"
+            className="mt-16 text-gray-500 dark:text-gray-500 text-sm"
           >
             <p>+92 307 851 8828 • minhasshahmir@hotmail.com</p>
           </motion.div>
@@ -181,12 +181,12 @@ function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-2"
+          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-300 dark:border-gray-600 rounded-full flex justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 12, 0], opacity: [0, 1, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-primary-400 rounded-full"
+            className="w-1.5 h-1.5 bg-primary-500 dark:bg-primary-400 rounded-full"
           />
         </motion.div>
       </motion.div>

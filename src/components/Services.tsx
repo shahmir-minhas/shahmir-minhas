@@ -13,7 +13,7 @@ function Services() {
   const whatsappMessage = encodeURIComponent('Hi Shahmir! I would like to discuss a project.')
 
   return (
-    <section id="services" className="py-24 bg-dark-bg relative overflow-hidden">
+    <section id="services" className="py-24 bg-gray-50 dark:bg-dark-bg relative overflow-hidden">
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,16 +27,16 @@ function Services() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
           >
             Services
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-white">What I Build for </span>
+            <span className="text-gray-900 dark:text-white">What I Build for </span>
             <span className="text-gradient">Clients</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Three ways to work together — from landing pages to full products
           </p>
         </motion.div>
@@ -53,24 +53,24 @@ function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="glass rounded-2xl p-8 border border-white/10 hover:border-primary-500/30 transition-all group"
+                className="glass rounded-2xl p-8 border hover:border-primary-500/30 transition-all group"
               >
                 {/* Icon */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-emerald/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon size={28} className="text-primary-400" />
+                    <Icon size={28} className="text-primary-500 dark:text-primary-400" />
                   </div>
                   <div className="text-right">
-                    <span className="text-2xl font-bold text-white">{index + 1}</span>
-                    <span className="text-gray-600">/3</span>
+                    <span className="text-2xl font-bold text-gray-900 dark:text-white">{index + 1}</span>
+                    <span className="text-gray-500 dark:text-gray-600">/3</span>
                   </div>
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gradient transition-all">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-gradient transition-all">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -79,7 +79,7 @@ function Services() {
                   {service.deliverables.slice(0, 4).map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <Check size={16} className="text-accent-emerald mt-1 flex-shrink-0" />
-                      <span className="text-sm text-gray-400">{item}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{item}</span>
                     </div>
                   ))}
                   {service.deliverables.length > 4 && (
@@ -90,9 +90,9 @@ function Services() {
                 </div>
 
                 {/* Outcome */}
-                <div className="pt-6 border-t border-white/10">
+                <div className="pt-6 border-t border-gray-200 dark:border-white/10">
                   <p className="text-sm text-gray-500 mb-2">You Get:</p>
-                  <p className="text-white font-medium">{service.outcome}</p>
+                  <p className="text-gray-900 dark:text-white font-medium">{service.outcome}</p>
                 </div>
               </motion.div>
             )
@@ -107,7 +107,7 @@ function Services() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             Not sure which one fits? Let's discuss your project.
           </p>
           <a
