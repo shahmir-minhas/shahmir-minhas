@@ -35,7 +35,7 @@ function FeaturedProduct() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-accent-emerald/10 border border-accent-emerald/20 rounded-full text-accent-emerald text-sm font-semibold mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-accent-emerald/10 border border-accent-emerald/20 rounded-full text-emerald-700 dark:text-accent-emerald text-sm font-semibold mb-6"
           >
             <Rocket size={16} />
             <span>What I'm Building</span>
@@ -90,15 +90,15 @@ function FeaturedProduct() {
               </h3>
               <div className="space-y-3">
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Frontend</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Frontend</p>
                   <p className="text-sm text-gray-700 dark:text-gray-300 font-mono">{featuredProduct.tech.frontend}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Backend</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Backend</p>
                   <p className="text-sm text-gray-700 dark:text-gray-300 font-mono">{featuredProduct.tech.backend}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Deployment</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Deployment</p>
                   <p className="text-sm text-gray-700 dark:text-gray-300 font-mono">{featuredProduct.tech.deployment}</p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ function FeaturedProduct() {
 
             {/* Marketing Site Links */}
             <div className="glass rounded-2xl p-6 border">
-              <h4 className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wide">Marketing Site</h4>
+              <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-4 uppercase tracking-wide">Marketing Site</h4>
               <div className="space-y-3">
                 <a
                   href={featuredProduct.links.marketing}
@@ -150,7 +150,7 @@ function FeaturedProduct() {
                     <Globe size={20} className="text-primary-500 dark:text-primary-400" />
                     <span className="text-gray-900 dark:text-white font-medium">Main Site</span>
                   </div>
-                  <ExternalLink size={16} className="text-gray-400 dark:text-gray-500 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
+                  <ExternalLink size={16} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
                 </a>
 
                 <div className="grid grid-cols-2 gap-2">
@@ -161,7 +161,7 @@ function FeaturedProduct() {
                     className="flex items-center justify-center gap-2 p-2 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-sm text-gray-700 dark:text-gray-300"
                   >
                     <span>🇸🇦 EN</span>
-                    <ExternalLink size={14} className="text-gray-400 dark:text-gray-500" />
+                    <ExternalLink size={14} className="text-gray-500 dark:text-gray-400" />
                   </a>
                   <a
                     href={featuredProduct.links.marketingSA_AR}
@@ -170,7 +170,7 @@ function FeaturedProduct() {
                     className="flex items-center justify-center gap-2 p-2 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-sm text-gray-700 dark:text-gray-300"
                   >
                     <span>🇸🇦 AR</span>
-                    <ExternalLink size={14} className="text-gray-400 dark:text-gray-500" />
+                    <ExternalLink size={14} className="text-gray-500 dark:text-gray-400" />
                   </a>
                   <a
                     href={featuredProduct.links.marketingPK_EN}
@@ -179,7 +179,7 @@ function FeaturedProduct() {
                     className="flex items-center justify-center gap-2 p-2 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-sm text-gray-700 dark:text-gray-300 col-span-2"
                   >
                     <span>🇵🇰 EN</span>
-                    <ExternalLink size={14} className="text-gray-400 dark:text-gray-500" />
+                    <ExternalLink size={14} className="text-gray-500 dark:text-gray-400" />
                   </a>
                 </div>
               </div>
@@ -187,7 +187,7 @@ function FeaturedProduct() {
 
             {/* Demo Apps */}
             <div className="glass rounded-2xl p-6 border">
-              <h4 className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wide">Live Product Demos</h4>
+              <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-4 uppercase tracking-wide">Live Product Demos</h4>
               <div className="space-y-3">
                 <a
                   href={featuredProduct.links.demoWeb}
@@ -196,7 +196,7 @@ function FeaturedProduct() {
                   className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors group"
                 >
                   <span className="text-gray-700 dark:text-gray-300">Web App</span>
-                  <ExternalLink size={16} className="text-gray-400 dark:text-gray-500 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
+                  <ExternalLink size={16} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
                 </a>
                 <a
                   href={featuredProduct.links.demoStore}
@@ -205,10 +205,10 @@ function FeaturedProduct() {
                   className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors group"
                 >
                   <div className="flex items-center gap-2">
-                    <ShoppingCart size={16} className="text-gray-500" />
+                    <ShoppingCart size={16} className="text-gray-500 dark:text-gray-400" />
                     <span className="text-gray-700 dark:text-gray-300">Store Demo</span>
                   </div>
-                  <ExternalLink size={16} className="text-gray-400 dark:text-gray-500 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
+                  <ExternalLink size={16} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
                 </a>
                 <a
                   href={featuredProduct.links.demoDriver}
@@ -217,10 +217,10 @@ function FeaturedProduct() {
                   className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors group"
                 >
                   <div className="flex items-center gap-2">
-                    <Truck size={16} className="text-gray-500" />
+                    <Truck size={16} className="text-gray-500 dark:text-gray-400" />
                     <span className="text-gray-700 dark:text-gray-300">Driver App</span>
                   </div>
-                  <ExternalLink size={16} className="text-gray-400 dark:text-gray-500 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
+                  <ExternalLink size={16} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors" />
                 </a>
               </div>
             </div>

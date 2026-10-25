@@ -27,7 +27,7 @@ function Services() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-700 dark:text-primary-300 text-sm font-semibold mb-6"
           >
             Services
           </motion.div>
@@ -58,11 +58,11 @@ function Services() {
                 {/* Icon */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-emerald/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon size={28} className="text-primary-500 dark:text-primary-400" />
+                    <Icon size={28} className="text-primary-700 dark:text-primary-400" />
                   </div>
                   <div className="text-right">
                     <span className="text-2xl font-bold text-gray-900 dark:text-white">{index + 1}</span>
-                    <span className="text-gray-500 dark:text-gray-600">/3</span>
+                    <span className="text-gray-500 dark:text-gray-500">/3</span>
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@ function Services() {
                     </div>
                   ))}
                   {service.deliverables.length > 4 && (
-                    <p className="text-sm text-gray-500 pl-6">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 pl-6">
                       +{service.deliverables.length - 4} more
                     </p>
                   )}
@@ -91,7 +91,7 @@ function Services() {
 
                 {/* Outcome */}
                 <div className="pt-6 border-t border-gray-200 dark:border-white/10">
-                  <p className="text-sm text-gray-500 mb-2">You Get:</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">You Get:</p>
                   <p className="text-gray-900 dark:text-white font-medium">{service.outcome}</p>
                 </div>
               </motion.div>
