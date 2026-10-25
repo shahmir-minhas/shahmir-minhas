@@ -58,7 +58,7 @@ function Contact() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-700 dark:text-primary-300 text-sm font-semibold mb-6"
           >
             Get In Touch
           </motion.div>
@@ -67,10 +67,10 @@ function Contact() {
             <span className="text-gray-900 dark:text-white">Let's Build </span>
             <span className="text-gradient">Something Great</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-4">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-4">
             Have a project in mind? Need a React/Next.js developer?
           </p>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             <MapPin className="inline-block mr-2" size={18} />
             Available for remote work • Pakistan timezone (UTC+5)
           </p>
@@ -100,13 +100,13 @@ function Contact() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-emerald/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <method.icon size={28} className="text-primary-400" />
+                    <method.icon size={28} className="text-primary-600 dark:text-primary-400" />
                   </div>
-                  <ArrowRight size={20} className="text-gray-600 group-hover:text-primary-500 dark:hover:text-primary-400 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={20} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{method.label}</h3>
-                <p className="text-primary-400 font-mono text-sm mb-2">{method.value}</p>
-                <p className="text-gray-500 text-sm">{method.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{method.label}</h3>
+                <p className="text-primary-700 dark:text-primary-400 font-mono text-sm mb-2">{method.value}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">{method.description}</p>
               </motion.a>
             ))}
           </motion.div>
@@ -119,7 +119,7 @@ function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="glass rounded-2xl p-8 border border"
           >
-            <h3 className="text-lg font-semibold text-gray-400 mb-6 text-center">Also Find Me On</h3>
+            <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6 text-center">Also Find Me On</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {contactMethods.filter(m => !m.primary).map((method) => (
                 <a
@@ -130,13 +130,13 @@ function Contact() {
                   className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 border border hover:border-primary-500/30 transition-all group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/10 to-transparent flex items-center justify-center">
-                    <method.icon size={20} className="text-gray-400 group-hover:text-primary-500 dark:hover:text-primary-400 transition-colors" />
+                    <method.icon size={20} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-white font-medium mb-0.5">{method.label}</p>
-                    <p className="text-gray-500 text-sm">{method.description}</p>
+                    <p className="text-gray-900 dark:text-white font-medium mb-0.5">{method.label}</p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">{method.description}</p>
                   </div>
-                  <ArrowRight size={16} className="text-gray-600 group-hover:text-primary-500 dark:hover:text-primary-400 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight size={16} className="text-gray-500 dark:text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 group-hover:translate-x-1 transition-all" />
                 </a>
               ))}
             </div>
@@ -152,7 +152,7 @@ function Contact() {
           >
             <div className="inline-flex items-center gap-3 px-6 py-3 glass rounded-full border border-accent-emerald/30">
               <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse"></div>
-              <span className="text-gray-300 font-medium">Currently accepting new projects</span>
+              <span className="text-gray-700 dark:text-gray-300 font-medium">Currently accepting new projects</span>
             </div>
           </motion.div>
         </div>

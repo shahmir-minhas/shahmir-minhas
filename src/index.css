@@ -30,7 +30,19 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-500 via-accent-emerald to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-700 via-emerald-600 to-cyan-700 dark:from-primary-400 dark:via-accent-emerald dark:to-primary-500 bg-clip-text text-transparent;
+  }
+
+  .text-heading {
+    @apply text-gray-900 dark:text-white;
+  }
+
+  .text-body {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
   }
 
   .glow-cyan {

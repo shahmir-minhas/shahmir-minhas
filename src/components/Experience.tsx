@@ -18,7 +18,7 @@ function Experience() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-500 dark:text-primary-400 text-sm font-semibold mb-6"
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-700 dark:text-primary-300 text-sm font-semibold mb-6"
           >
             Experience
           </motion.div>
@@ -45,15 +45,15 @@ function Experience() {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-emerald/20 flex items-center justify-center">
-                      <Briefcase size={24} className="text-primary-400" />
+                      <Briefcase size={24} className="text-primary-600 dark:text-primary-400" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{exp.title}</h3>
-                      <p className="text-lg text-primary-400 font-semibold">{exp.company}</p>
+                      <p className="text-lg text-primary-700 dark:text-primary-400 font-semibold">{exp.company}</p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-400 ml-15">
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400 ml-15">
                     <div className="flex items-center gap-2">
                       <MapPin size={16} />
                       <span>{exp.location}</span>
@@ -66,8 +66,8 @@ function Experience() {
                 </div>
 
                 <div className="flex items-center gap-2 px-4 py-2 bg-accent-emerald/10 border border-accent-emerald/20 rounded-lg">
-                  <Calendar size={16} className="text-accent-emerald" />
-                  <span className="text-accent-emerald font-semibold text-sm">{exp.duration}</span>
+                  <Calendar size={16} className="text-emerald-700 dark:text-accent-emerald" />
+                  <span className="text-emerald-700 dark:text-accent-emerald font-semibold text-sm">{exp.duration}</span>
                 </div>
               </div>
 
@@ -75,8 +75,8 @@ function Experience() {
               {exp.progression && (
                 <div className="mb-6 p-4 bg-primary-500/5 border border-primary-500/10 rounded-lg">
                   <div className="flex items-start gap-2">
-                    <TrendingUp size={18} className="text-primary-400 mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-gray-400 leading-relaxed">
+                    <TrendingUp size={18} className="text-primary-600 dark:text-primary-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                       <strong className="text-gray-700 dark:text-gray-300">Progression:</strong> {exp.progression}
                     </p>
                   </div>
@@ -88,14 +88,14 @@ function Experience() {
                 {exp.description.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300 leading-relaxed">{item}</p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
 
               {/* Technologies */}
               <div className="pt-6 border-t border">
-                <p className="text-xs text-gray-500 mb-3 uppercase tracking-wide">Technologies</p>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 uppercase tracking-wide">Technologies</p>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIdx) => (
                     <span

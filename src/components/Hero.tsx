@@ -6,34 +6,66 @@ function Hero() {
   const whatsappMessage = encodeURIComponent('Hi Shahmir! I would like to discuss a project.')
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:bg-dark-bg">
-      {/* Gradient Mesh Background */}
-      <div className="absolute inset-0 bg-gradient-mesh opacity-20 dark:opacity-40"></div>
-      
-      {/* Animated Glow Orbs */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f4f7fb] dark:bg-[#0b0f14]">
+      {/* Light aurora / Dark charcoal mesh — CSS only */}
+      <div
+        className="absolute inset-0 opacity-90 dark:opacity-100"
+        style={{
+          backgroundImage: [
+            'radial-gradient(ellipse 80% 60% at 12% 18%, rgba(14, 116, 144, 0.16), transparent 55%)',
+            'radial-gradient(ellipse 70% 50% at 88% 12%, rgba(16, 185, 129, 0.14), transparent 50%)',
+            'radial-gradient(ellipse 60% 55% at 78% 88%, rgba(109, 40, 217, 0.10), transparent 55%)',
+            'linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(244,247,251,0.2) 40%, rgba(244,247,251,0.85) 100%)',
+          ].join(', '),
+        }}
+      />
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          backgroundImage: [
+            'radial-gradient(ellipse 90% 70% at 8% 10%, rgba(6, 182, 212, 0.22), transparent 50%)',
+            'radial-gradient(ellipse 70% 55% at 92% 18%, rgba(16, 185, 129, 0.16), transparent 48%)',
+            'radial-gradient(ellipse 65% 60% at 70% 92%, rgba(139, 92, 246, 0.16), transparent 52%)',
+            'linear-gradient(180deg, rgba(11,15,20,0.2) 0%, rgba(11,15,20,0.55) 55%, rgba(11,15,20,0.92) 100%)',
+          ].join(', '),
+        }}
+      />
+
+      {/* Fine grid */}
+      <div
+        className="absolute inset-0 opacity-[0.35] dark:opacity-[0.18]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+          maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 35%, transparent 85%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 hidden dark:block opacity-40"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+          maskImage: 'radial-gradient(ellipse 80% 70% at 50% 40%, black 35%, transparent 85%)',
+        }}
+      />
+
+      {/* Soft moving orbs */}
       <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-20 right-20 w-96 h-96 bg-primary-500/20 dark:bg-primary-500/30 rounded-full blur-3xl"
+        animate={{ scale: [1, 1.08, 1], x: [0, 24, 0], y: [0, -16, 0] }}
+        transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute -top-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-cyan-300/40 blur-3xl dark:bg-cyan-500/20"
       />
       <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute bottom-20 left-20 w-96 h-96 bg-accent-emerald/10 dark:bg-accent-emerald/20 rounded-full blur-3xl"
+        animate={{ scale: [1.05, 1, 1.05], x: [0, -28, 0], y: [0, 20, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute -bottom-36 -left-28 h-[26rem] w-[26rem] rounded-full bg-emerald-200/50 blur-3xl dark:bg-emerald-500/15"
+      />
+      <motion.div
+        animate={{ scale: [1, 1.12, 1] }}
+        transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-[42%] right-[18%] h-72 w-72 rounded-full bg-violet-200/40 blur-3xl dark:bg-violet-500/15"
       />
 
       <div className="container-custom relative z-10 py-20">
@@ -113,7 +145,7 @@ function Hero() {
           >
             I ship React/Next.js + Node products that get clients paying users.
             <br />
-            <span className="text-gray-500 dark:text-gray-500">5+ years • Pakistan • Remote</span>
+            <span className="text-gray-600 dark:text-gray-400">5+ years • Pakistan • Remote</span>
           </motion.p>
 
           {/* Primary CTAs */}
@@ -158,7 +190,7 @@ function Hero() {
               href="https://www.linkedin.com/in/shahmir-minhas"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               <Linkedin size={20} />
               <span className="text-sm">LinkedIn</span>
@@ -168,7 +200,7 @@ function Hero() {
               href="https://github.com/shahmir-minhas"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+              className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               <Github size={20} />
               <span className="text-sm">GitHub</span>
@@ -180,7 +212,7 @@ function Hero() {
               href="https://mizan-erp-site.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-accent-emerald hover:text-accent-emerald/80 transition-colors"
+              className="flex items-center gap-2 text-emerald-700 dark:text-accent-emerald hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors"
             >
               <Sparkles size={20} />
               <span className="text-sm font-medium">See my ERP product</span>
@@ -193,7 +225,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 text-gray-500 dark:text-gray-500 text-sm"
+            className="mt-12 text-gray-600 dark:text-gray-400 text-sm"
           >
             <p>
               <a href="tel:+923078518828" className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
@@ -218,7 +250,7 @@ function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-300 dark:border-gray-600 rounded-full flex justify-center p-2"
+          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 12, 0], opacity: [0, 1, 0] }}
