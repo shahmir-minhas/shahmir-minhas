@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, ChevronRight, Lightbulb, Hammer, Target } from 'lucide-react'
 import { projects } from '../data/projects'
+import TechBadge from './TechBadge'
 
 function Projects() {
   const featuredProjects = projects.filter(p => p.featured)
@@ -121,16 +122,11 @@ function Projects() {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="pt-6 border-t border">
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.04] px-5 py-5">
                   <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 uppercase tracking-wide">Tech Stack</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIdx) => (
-                      <span
-                        key={techIdx}
-                        className="px-3 py-1 bg-gray-50 dark:bg-white/5 border border rounded-lg text-xs text-gray-600 dark:text-gray-400"
-                      >
-                        {tech}
-                      </span>
+                      <TechBadge key={techIdx} label={tech} />
                     ))}
                   </div>
                 </div>
@@ -189,12 +185,7 @@ function Projects() {
                   {/* Tech (first 4) */}
                   <div className="flex flex-wrap gap-1.5">
                     {project.technologies.slice(0, 4).map((tech, techIdx) => (
-                      <span
-                        key={techIdx}
-                        className="px-2 py-0.5 bg-gray-50 dark:bg-white/5 border border rounded text-xs text-gray-600 dark:text-gray-400"
-                      >
-                        {tech}
-                      </span>
+                      <TechBadge key={techIdx} label={tech} size="sm" />
                     ))}
                     {project.technologies.length > 4 && (
                       <span className="px-2 py-0.5 text-xs text-gray-600">
