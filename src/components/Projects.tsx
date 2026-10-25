@@ -121,13 +121,13 @@ function Projects() {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="pt-6 border-t border">
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/[0.04] px-5 py-5">
                   <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 uppercase tracking-wide">Tech Stack</p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIdx) => (
                       <span
                         key={techIdx}
-                        className="px-3 py-1 bg-gray-50 dark:bg-white/5 border border rounded-lg text-xs text-gray-600 dark:text-gray-400"
+                        className="px-3 py-1.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs text-gray-700 dark:text-gray-300"
                       >
                         {tech}
                       </span>
