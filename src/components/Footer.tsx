@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Heart, Mail, Linkedin, Github, MessageCircle } from 'lucide-react'
+import { Mail, Linkedin, Github, MessageCircle } from 'lucide-react'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -115,13 +115,10 @@ function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="pt-8 border-t border flex flex-col md:flex-row justify-between items-center gap-4"
+          className="pt-8 border-t border text-center"
         >
-          <p className="text-gray-500 text-sm text-center md:text-left">
+          <p className="text-gray-500 text-sm">
             © {currentYear} Shahmir Minhas. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-sm flex items-center gap-2">
-            Built with <Heart size={14} className="text-red-500 fill-current" /> using React + TypeScript + Tailwind
           </p>
         </motion.div>
       </div>
