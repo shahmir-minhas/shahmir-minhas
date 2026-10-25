@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { skillCategories } from '../data/skills'
+import TechBadge from './TechBadge'
 
 function Skills() {
   return (
@@ -59,9 +60,8 @@ function Skills() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: index * 0.05 + skillIndex * 0.02 }}
                       whileHover={{ scale: 1.05 }}
-                      className="px-3 py-1.5 bg-gray-100 dark:bg-white/5 hover:bg-primary-500/10 border border hover:border-primary-500/30 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-400 transition-all cursor-default"
                     >
-                      {skill}
+                      <TechBadge label={skill} />
                     </motion.span>
                   ))}
                 </div>

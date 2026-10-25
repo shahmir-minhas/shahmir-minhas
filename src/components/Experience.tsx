@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Briefcase, MapPin, Calendar, TrendingUp } from 'lucide-react'
 import { experiences } from '../data/experience'
+import TechBadge from './TechBadge'
 
 function Experience() {
   return (
@@ -98,12 +99,7 @@ function Experience() {
                 <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 uppercase tracking-wide">Tech Stack</p>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIdx) => (
-                    <span
-                      key={techIdx}
-                      className="px-3 py-1.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs text-gray-700 dark:text-gray-300"
-                    >
-                      {tech}
-                    </span>
+                    <TechBadge key={techIdx} label={tech} />
                   ))}
                 </div>
               </div>
