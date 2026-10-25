@@ -41,69 +41,75 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto text-center"
+          className="max-w-5xl mx-auto"
         >
-          {/* Profile Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="mb-8"
-          >
-            <div className="relative inline-block">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-emerald to-primary-600 p-1"
-              />
-              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-white dark:bg-dark-bg">
-                <img 
-                  src="/shahmir-profile.jpg" 
-                  alt="Shahmir Minhas"
-                  className="w-full h-full rounded-full object-cover"
+          {/* Photo + Name Row - Left Aligned */}
+          <div className="flex flex-col md:flex-row items-start gap-6 mb-12">
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="flex-shrink-0"
+            >
+              <div className="relative">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-emerald to-primary-600 p-1"
                 />
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full p-1 bg-white dark:bg-dark-bg">
+                  <img 
+                    src="/shahmir-profile.jpg" 
+                    alt="Shahmir Minhas"
+                    className="w-full h-full rounded-full object-cover"
+                  />
+                </div>
               </div>
+            </motion.div>
+
+            {/* Name and Title */}
+            <div className="flex-1">
+              {/* Name */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold mb-3 tracking-tight"
+              >
+                <span className="text-gray-900 dark:text-white">Shahmir </span>
+                <span className="text-gradient">Minhas</span>
+              </motion.h1>
+
+              {/* Positioning Statement */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-3 font-medium"
+              >
+                Senior Full-Stack Engineer
+              </motion.p>
+
+              {/* Availability Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-accent-emerald/30"
+              >
+                <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Open for freelance projects</span>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Availability Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-8 glass rounded-full border border-accent-emerald/30"
-          >
-            <div className="w-2 h-2 bg-accent-emerald rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Open for freelance projects</span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
-          >
-            <span className="text-gray-900 dark:text-white">Shahmir</span>
-            <br />
-            <span className="text-gradient">Minhas</span>
-          </motion.h1>
-
-          {/* Positioning Statement */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-4 font-medium leading-relaxed"
-          >
-            Senior Full-Stack Engineer
-          </motion.p>
-
+          {/* Bio */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl leading-relaxed"
           >
             I ship React/Next.js + Node products that get clients paying users.
             <br />
@@ -115,7 +121,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap gap-4 mb-12"
           >
             <motion.a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
@@ -146,7 +152,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-wrap justify-center items-center gap-6"
+            className="flex flex-wrap items-center gap-6"
           >
             <a
               href="https://www.linkedin.com/in/shahmir-minhas"
@@ -187,7 +193,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-16 text-gray-500 dark:text-gray-500 text-sm"
+            className="mt-12 text-gray-500 dark:text-gray-500 text-sm"
           >
             <p>
               <a href="tel:+923078518828" className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
