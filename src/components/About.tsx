@@ -1,44 +1,21 @@
 import { motion } from 'framer-motion'
-import { Code2, Users, Zap } from 'lucide-react'
+import { Award, Users, Briefcase, GraduationCap } from 'lucide-react'
 
 function About() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.6 }
-  }
-
-  const features = [
-    {
-      icon: Code2,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and well-documented code following best practices and industry standards',
-      color: 'from-blue-500 to-blue-600'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Building high-performance applications with optimized rendering, efficient state management, and fast load times',
-      color: 'from-yellow-500 to-orange-600'
-    },
-    {
-      icon: Users,
-      title: 'Leadership',
-      description: 'Leading frontend teams, mentoring developers, and driving technical decisions to deliver exceptional results',
-      color: 'from-purple-500 to-purple-600'
-    }
-  ]
-
   const stats = [
-    { value: '4+', label: 'Years Experience', gradient: 'from-blue-500 to-blue-600' },
-    { value: '50+', label: 'Projects', gradient: 'from-purple-500 to-purple-600' },
-    { value: '100%', label: 'Commitment', gradient: 'from-pink-500 to-pink-600' }
+    { icon: Briefcase, value: '5+', label: 'Years Experience', color: 'from-primary-500 to-primary-600' },
+    { icon: Award, value: '15+', label: 'Major Projects', color: 'from-accent-emerald to-green-600' },
+    { icon: Users, value: 'Lead', label: 'Team Roles', color: 'from-accent-violet to-purple-600' },
   ]
 
   return (
-    <section id="about" className="py-24 bg-white dark:bg-gray-900">
-      <div className="container-custom">
+    <section id="about" className="py-24 bg-dark-surface relative overflow-hidden">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+      </div>
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,123 +23,89 @@ function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.span
-            initial={{ opacity: 0, scale: 0 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-4"
+            transition={{ duration: 0.5 }}
+            className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold mb-6"
           >
-            About
-          </motion.span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4"></div>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div {...fadeInUp} className="space-y-6">
-            <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
-            >
-              A dedicated software engineer with a passion for building scalable, user-centric web
-              applications. Strong expertise in React.js, Next.js, modern frontend architecture,
-              state management, and API integration.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
-            >
-              Experienced in leading frontend teams, delivering pixel-perfect UI/UX, and working with
-              Agile methodologies. I thrive on solving complex problems and transforming ideas into
-              high-quality digital experiences.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
-            >
-              With 4+ years of hands-on experience, I've worked on diverse projects ranging from
-              enterprise applications to modern web platforms, always focusing on code quality,
-              performance, and user experience.
-            </motion.p>
+            Background
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: 30 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-3 gap-4"
-          >
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+            <span className="text-gradient">Frontend-Focused,</span>
+            <br />
+            <span className="text-white">Full-Stack Capable</span>
+          </h2>
+        </motion.div>
+
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Stats */}
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 30, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.05 }}
-                className={`bg-gradient-to-br ${stat.gradient} rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all cursor-default`}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="glass rounded-2xl p-8 border border-white/10 text-center group"
               >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 + 0.2, type: "spring", stiffness: 200 }}
-                  className="text-4xl font-bold text-white mb-2"
-                >
-                  {stat.value}
-                </motion.div>
-                <div className="text-white/90 text-sm font-medium">{stat.label}</div>
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center`}>
+                  <stat.icon size={32} className="text-white" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Summary */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="glass rounded-2xl p-8 md:p-12 border border-white/10 space-y-6"
+          >
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Frontend-focused software engineer with <strong className="text-white">5+ years of experience</strong> building 
+              scalable, user-centric web applications, including a period as <strong className="text-white">Lead Frontend Developer</strong>.
+            </p>
+            
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Deep expertise in <strong className="text-primary-400">React.js and Next.js</strong>, reusable component architecture, 
+              state management (Redux Toolkit, Zustand, React Query) and REST/GraphQL API integration.
+            </p>
+
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Full-stack capable, with intermediate backend experience in <strong className="text-white">Node.js (Express, NestJS)</strong> and 
+              ASP.NET Core and Laravel, working with PostgreSQL, MongoDB and Prisma.
+            </p>
+
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Experienced in remote Agile (Scrum) teams. Owned the frontend of a <strong className="text-primary-400">multi-product 
+              ERP/HRM/POS suite</strong> end to end, led small frontend teams, and built real-time web and Electron desktop 
+              applications for crypto trading, warehouse and HR domains.
+            </p>
+
+            {/* Education */}
+            <div className="pt-8 border-t border-white/10">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center flex-shrink-0">
+                  <GraduationCap size={24} className="text-primary-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-1">BS Software Engineering</h3>
+                  <p className="text-gray-400">University of Haripur, Pakistan</p>
+                  <p className="text-gray-500 text-sm">CGPA: 3.64 • 2019</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 group"
-            >
-              <motion.div
-                whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                transition={{ duration: 0.5 }}
-                className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}
-              >
-                <feature.icon className="text-white" size={32} />
-              </motion.div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   )

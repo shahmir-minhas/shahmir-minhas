@@ -1,21 +1,39 @@
-import { Moon, Sun } from 'lucide-react'
+import { Sun, Moon } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 interface ThemeToggleProps {
   darkMode: boolean
-  setDarkMode: (value: boolean) => void
+  setDarkMode: (dark: boolean) => void
 }
 
 function ThemeToggle({ darkMode, setDarkMode }: ThemeToggleProps) {
   return (
-    <button
+    <motion.button
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
       onClick={() => setDarkMode(!darkMode)}
-      className="fixed top-6 right-6 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300 shadow-lg"
-      aria-label="Toggle dark mode"
+      className="fixed top-6 right-6 z-50 w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-primary-500/30 transition-all group"
+      aria-label="Toggle theme"
     >
-      {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-    </button>
+      <motion.div
+        initial={false}
+        animate={{ rotate: darkMode ? 0 : 180, scale: darkMode ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute"
+      >
+        <Moon size={20} className="text-primary-400" />
+      </motion.div>
+      <motion.div
+        initial={false}
+        animate={{ rotate: darkMode ? 180 : 0, scale: darkMode ? 0 : 1 }}
+        transition={{ duration: 0.3 }}
+        className="absolute"
+      >
+        <Sun size={20} className="text-yellow-400" />
+      </motion.div>
+    </motion.button>
   )
 }
 
 export default ThemeToggle
-

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
+import FeaturedProduct from './components/FeaturedProduct'
+import Services from './components/Services'
 import About from './components/About'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
@@ -9,10 +11,14 @@ import Footer from './components/Footer'
 import ThemeToggle from './components/ThemeToggle'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
+  const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
     const saved = localStorage.getItem('darkMode')
-    return saved ? JSON.parse(saved) : false
-  })
+    if (saved !== null) {
+      setDarkMode(JSON.parse(saved))
+    }
+  }, [])
 
   useEffect(() => {
     if (darkMode) {
@@ -24,9 +30,11 @@ function App() {
   }, [darkMode])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-dark-bg text-gray-100 transition-colors duration-300">
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
+      <FeaturedProduct />
+      <Services />
       <About />
       <Skills />
       <Experience />
@@ -38,4 +46,3 @@ function App() {
 }
 
 export default App
-
