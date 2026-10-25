@@ -16,6 +16,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'Safi Craft',
+    role: 'Full-Stack Developer',
+    description: 'E-commerce website for craft and artisan products',
+    featured: true,
+    problem: 'Craft business needed an online presence to showcase and sell their artisan products to a wider audience.',
+    approach: 'Built a modern e-commerce website with product showcases, shopping features, and optimized user experience.',
+    outcome: 'Live production website serving as the primary sales and marketing channel for craft products.',
+    features: [
+      'Product catalog and showcases',
+      'E-commerce functionality',
+      'Responsive design for all devices',
+      'Modern shopping experience',
+      'Fast performance'
+    ],
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
+    category: 'Client Website',
+    demoUrl: 'https://safi-craft.vercel.app/'
+  },
+  {
     name: 'Sergha General Transport',
     role: 'Full-Stack Developer',
     description: 'Corporate website for heavy transport and equipment company in UAE',
