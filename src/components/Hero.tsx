@@ -43,6 +43,29 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto text-center"
         >
+          {/* Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mb-8"
+          >
+            <div className="relative inline-block">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-emerald to-primary-600 p-1"
+              />
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-white dark:bg-dark-bg">
+                <img 
+                  src="/shahmir-profile.jpg" 
+                  alt="Shahmir Minhas"
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+
           {/* Availability Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -166,7 +189,15 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-16 text-gray-500 dark:text-gray-500 text-sm"
           >
-            <p>+92 307 851 8828 • minhasshahmir@hotmail.com</p>
+            <p>
+              <a href="tel:+923078518828" className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                +92 307 851 8828
+              </a>
+              {' • '}
+              <a href="mailto:minhasshahmir@hotmail.com" className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                minhasshahmir@hotmail.com
+              </a>
+            </p>
           </motion.div>
         </motion.div>
       </div>
